@@ -1,0 +1,7 @@
+Adapter pattern is used basically when underlying class has different interface than
+what client is expecting but underlying class provides the service that the client
+needs.
+
+continue : 32
+
+Solution starts from page : 301
