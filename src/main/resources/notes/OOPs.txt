@@ -1,0 +1,21 @@
+------ Encapsulation -----
+
+Bundling data members and methods in one entity called class.
+Making data members as private such that state is not modified by outside class.
+Basically, java works on objects and bundling enables it to interact in the form of objects.
+
+------ Abstraction ------
+
+Reduce complexity by hiding unnecessary details from client.
+Basically, exposing and promoting method definition and reuse.
+If we don't follow abstraction then everywhere we would need to
+re-implement underlying implementation which would increase complexity.
+
+Also, abstraction is about exposing only necessary method to other classes.
+internally, exposed method may use many methods which must be hidden from outside class.
+
+------ Inheritance -------
+
+Inheritance allows us to reuse code.
+common methods can be defined in base class which can be inherited by other classes.
+In this way, we prevented duplication of methods and promoted re-usability of common methods.
