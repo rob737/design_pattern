@@ -19,3 +19,11 @@ internally, exposed method may use many methods which must be hidden from outsid
 Inheritance allows us to reuse code.
 common methods can be defined in base class which can be inherited by other classes.
 In this way, we prevented duplication of methods and promoted re-usability of common methods.
+
+
+------ Polymorphism -------
+
+more like an object member function can take up multiple forms.
+Example of these are late binding (dynamic dispatch) using interface,
+abstract class with abstract method being implemented in inherited class.
+

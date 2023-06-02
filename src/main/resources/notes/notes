@@ -4,3 +4,6 @@ Design patterns are primarily of 3 types :
 2. Structural : All about relationship between created objects.
 3. Behavioural : All about interaction or communication between structured objects.
 
+Note: In course, first we will start with behavioural pattern, then structural and then creational.
+
+
