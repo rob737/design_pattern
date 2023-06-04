@@ -1,0 +1,21 @@
+--- why is it used?
+
+memento pattern is used to implement undo features.
+
+---- Doubt Section ----
+1. How is it not violating Single Responsibility Principle?
+
+--- Single Responsibility principle (one of SOLID Principles) :
+
+Every class must do only one thing.
+e.g. Editor class was doing two things.
+1. Providing functionality of an editor
+2. Doing state management for undo feature
+
+That's why it was violating Single Responsibility pattern.
+
+--- Memento pattern consists of 3 actors :
+
+1. Originator : Editor class in our case
+2. Memento : EditorState class in our case
+3. Caretaker : History class in our case
