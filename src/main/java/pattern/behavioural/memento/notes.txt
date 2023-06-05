@@ -19,3 +19,8 @@ That's why it was violating Single Responsibility pattern.
 1. Originator : Editor class in our case
 2. Memento : EditorState class in our case
 3. Caretaker : History class in our case
+
+
+--- Real world use case ---
+1. Undo operation
+2. Git reset to previous commit. (blog on this)
