@@ -1,0 +1,11 @@
+--- State pattern fundamental.
+
+Whenever the behaviour of an object changes based on the selected option(denoted by state)
+then we can leverage state pattern.
+
+e.g. paintbrush tool.
+If we select rectangle option then mouse movement will draw rectangle.
+If we select circle option then the mouse movement will draw circle.
+
+In above case, based on selected draw option (i.e. rectangle, circle etc), behaviour of mouse
+object will change.
