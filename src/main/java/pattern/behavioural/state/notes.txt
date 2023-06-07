@@ -9,3 +9,22 @@ If we select circle option then the mouse movement will draw circle.
 
 In above case, based on selected draw option (i.e. rectangle, circle etc), behaviour of mouse
 object will change.
+
+Note: Instead of interface (my solution), alternative was to use abstract class but since we don't have to
+provide any common method to all the underlying classes so we didn't use it.
+
+--- State pattern consists of 3 actors :
+
+Context : The entity which supplies the corresponding option for state to decide on the implementation.
+State : Abstract class that uses polymorphism to decide on concrete implementation class.
+Concrete Classes that extends State : Concrete implementation class defining the exact business logic.
+
+
+Note: Using State pattern, we also demonstrated Open Closed principle in SOLID.
+(Open for extension and closed for modification)
+
+***** Very Important *****
+
+Don't abuse the patterns i.e. evey design pattern is for a particular type of scenario.
+If that scenario comes up then only use the pattern else don't over complicate things.
+(called as design smell).
