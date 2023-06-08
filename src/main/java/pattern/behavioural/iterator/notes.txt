@@ -1,0 +1,14 @@
+---- Iterator pattern :
+
+Why is it used ?
+
+one general rule of thumb is that if class A is dependent on class B then internal changes
+in class B must not change the contract of exposed method between class A and class B.
+
+Iterator can be very useful here to iterate over elements irrespective
+of the fact which datastructure was used internally to store the states in class B.
+
+
+It is very useful and popular.
+Real world use case :
+1. Designing history (go back mechanism) in web browser.

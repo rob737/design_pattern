@@ -28,3 +28,10 @@ Note: Using State pattern, we also demonstrated Open Closed principle in SOLID.
 Don't abuse the patterns i.e. evey design pattern is for a particular type of scenario.
 If that scenario comes up then only use the pattern else don't over complicate things.
 (called as design smell).
+
+**** Real world use case ****
+
+1. Any context driven architecture like Nirog money use case.
+2. Market driven interest rate calculation i.e. if market code is X then do this etc.
+
+Note : If the option is boolean or fixed to a small number then you are better off without pattern.
