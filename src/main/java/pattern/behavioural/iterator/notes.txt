@@ -19,3 +19,8 @@ Real world use case :
 History class : The entity that needs to be iterated.
 iterator : interface that has next(), current() and hasNext() method.
 concrete implementations : concrete implementations for iterator interface.
+
+
+---- Doubt :
+
+What is the significance of static inner class?

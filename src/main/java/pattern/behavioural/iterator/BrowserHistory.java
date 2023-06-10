@@ -19,12 +19,16 @@ public class BrowserHistory {
     }
 
     public iterator<String> createIterator(){
-        return new ListIterator();
+        return new ListIterator(this);
     }
 
     class ListIterator implements iterator<String>{
         int index;
-        BrowserHistory history = BrowserHistory.this;
+        BrowserHistory history;
+
+        ListIterator(BrowserHistory history){
+            this.history = history;
+        }
 
         @Override
         public boolean hasNext() {
