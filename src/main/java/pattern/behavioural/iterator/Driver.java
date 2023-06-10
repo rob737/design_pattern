@@ -1,7 +1,5 @@
 package pattern.behavioural.iterator;
 
-import java.util.List;
-
 public class Driver {
     public static void main(String[] args) {
         BrowserHistory history = new BrowserHistory();
@@ -10,13 +8,19 @@ public class Driver {
         history.push("c");
 
         // iterate over history
-        List<String> list = history.getList();
+        /*List<String> list = history.getHistory();
         for(String val : list)
-            System.out.println(val);
+            System.out.println(val);*/
         /*
         * above implementation will have issues if history class changes the underlying datastructure
         * to store history.
         * We can use iterator pattern in scenarios like this.
         * */
+
+        iterator iterator = history.createIterator();
+        while (iterator.hasNext()){
+            System.out.println(iterator.current());
+            iterator.next();
+        }
     }
 }

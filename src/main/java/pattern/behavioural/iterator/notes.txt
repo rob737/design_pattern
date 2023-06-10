@@ -12,3 +12,10 @@ of the fact which datastructure was used internally to store the states in class
 It is very useful and popular.
 Real world use case :
 1. Designing history (go back mechanism) in web browser.
+
+
+----- Iterator pattern components :
+
+History class : The entity that needs to be iterated.
+iterator : interface that has next(), current() and hasNext() method.
+concrete implementations : concrete implementations for iterator interface.

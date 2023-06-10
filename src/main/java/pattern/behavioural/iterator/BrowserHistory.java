@@ -4,18 +4,42 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BrowserHistory {
-    List<String> list = new ArrayList<>();
+    List<String> history = new ArrayList<>();
 
     public void push(String ele){
-        list.add(ele);
+        history.add(ele);
     }
 
     public String pop(){
-        return list.remove(list.size()-1);
+        return history.remove(history.size()-1);
     }
 
-    public List<String> getList() {
-        return list;
+    private List<String> getHistory() {
+        return history;
+    }
+
+    public iterator<String> createIterator(){
+        return new ListIterator();
+    }
+
+    class ListIterator implements iterator<String>{
+        int index;
+        BrowserHistory history = BrowserHistory.this;
+
+        @Override
+        public boolean hasNext() {
+            return index < history.getHistory().size();
+        }
+
+        @Override
+        public String current() {
+            return history.getHistory().get(index);
+        }
+
+        @Override
+        public void next() {
+            index++;
+        }
     }
 
 }
