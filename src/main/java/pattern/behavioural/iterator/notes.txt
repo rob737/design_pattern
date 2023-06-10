@@ -24,3 +24,5 @@ concrete implementations : concrete implementations for iterator interface.
 ---- Doubt :
 
 What is the significance of static inner class?
+
+mostly it just helps in encapsulation, nothing fancy.
