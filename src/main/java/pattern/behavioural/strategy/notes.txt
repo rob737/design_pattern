@@ -1,0 +1,5 @@
+--- Why is it needed?
+
+As far as I have understood, strategy is more or less similar to state pattern.
+
+based on certain option, we need to leverage a certain strategy.
