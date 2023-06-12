@@ -1,15 +1,15 @@
 package pattern.behavioural.strategy;
 
 public class ImageStore {
-    private final Compressor compressor;
-    private final Filter filter;
+    private final ImageCompressor compressor;
+    private final ImageFilter filter;
 
-    public ImageStore(Compressor compressor, Filter filter) {
+    public ImageStore(ImageCompressor compressor, ImageFilter filter) {
         this.compressor = compressor;
         this.filter = filter;
     }
 
-    public void store(String fileName){
+   /* public void store(String fileName){
         if(compressor == Compressor.JPEG){
             System.out.println("Compressing using JPEG ...");
         }else if(compressor == Compressor.PNG){
@@ -21,5 +21,10 @@ public class ImageStore {
         }else if(filter == Filter.HIGH_CONTRAST){
             System.out.println("Filter using high contrast");
         }
+    }*/
+
+    public void store(String fileName){
+        compressor.compress();
+        filter.filter();
     }
 }

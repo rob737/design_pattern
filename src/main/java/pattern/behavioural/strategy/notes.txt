@@ -3,3 +3,22 @@
 As far as I have understood, strategy is more or less similar to state pattern.
 
 based on certain option, we need to leverage a certain strategy.
+
+
+Difference between state and strategy pattern :
+
+State pattern is basically one option and one implementation at runtime.
+e.g. one image can be mapped to only one implementation.
+Use state pattern when only one state can have exactly one active implementation at runtime.
+
+Strategy pattern is basically one state/option, multiple underlying implementation/strategy at runtime.
+e.g. same image can be compressed using multiple compression strategies.
+Use strategy pattern when one state can leverage multiple strategies to get the work done.
+ It is particularly useful when you have multiple algorithms that achieve the same goal
+ but have different implementations or performance characteristics.
+
+Real world use case :
+1. Image resize in different format as we did in NS.
+2. Cancel order can use strategy pattern as order cancel option can be achieved
+    automatically, manually, in case of errors.
+    To word it differently, what strategy will you use to cancel order.
