@@ -1,0 +1,12 @@
+---- Why to use template method?
+
+There can be certain functionalities that needs to happen irrespective of the action
+that is being performed.
+In order to ensure that this happens, we can define a template pattern to ensure that
+common functionality is automatically taken care of.
+
+Example :
+whenever, we are performing any operation on our table, we need to ensure that
+accessedAt column is updated with current time.
+
+we can define a template for this to guarantee the recording.
