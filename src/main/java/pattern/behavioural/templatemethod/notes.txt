@@ -10,3 +10,31 @@ whenever, we are performing any operation on our table, we need to ensure that
 accessedAt column is updated with current time.
 
 we can define a template for this to guarantee the recording.
+
+It is called template method pattern because it provides a template to prevent
+each developer code in their style and also promote re-usability.
+
+Structure :
+
+Abstract class : templateMethod(), primitiveOperation1(), primitiveOPeration2()
+Concrete class : implementation of primitiveOPeration1() and primitiveOperation2()
+
+Note : Hook methods are the methods that has a default implementation in the base class.
+
+Note : so, we can use template method wherever there are certain operations which are common
+       for each class and there are operations which are specific to that class.
+       e.g. Order status update, let's say order status is delivered then you need
+       to do some operations specific to delivered status but there is a common
+       task of logging the order status in some table.
+
+--- Real world use case :
+
+1. write a blog for order status scenario as we did in NS.
+2. Template method can be used to deign beforeEach, afterEach in Junit test cases.
+3. BeforeHook and AfterHook in adminjs.
+
+Note: private methods are not inherited by subclasses.
+Note: protected methods are visible only to inherited classes across anywhere and to classes in same package.
+Note: let's say Object A extends Object B, if you do objectA.sum() but sum method is
+      not present in objectA then it will try and call sum() method in base class
+      and if it doesn't find it there as well then it would throw exception.

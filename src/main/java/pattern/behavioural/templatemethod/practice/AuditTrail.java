@@ -1,4 +1,4 @@
-package pattern.behavioural.templatemethod;
+package pattern.behavioural.templatemethod.practice;
 
 public class AuditTrail {
     public void record(){

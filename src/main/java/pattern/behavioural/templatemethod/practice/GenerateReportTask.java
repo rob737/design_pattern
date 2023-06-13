@@ -1,4 +1,4 @@
-package pattern.behavioural.templatemethod;
+package pattern.behavioural.templatemethod.practice;
 
 /*
 * There are 2 issues with current implementation :
@@ -8,16 +8,21 @@ package pattern.behavioural.templatemethod;
 * I think we can use Inheritance to solve this problem.
 * */
 
-public class GenerateReportTask extends FinancialTask{
+public class GenerateReportTask extends FinancialTask {
+
+    @Override
+    protected void doExecute() {
+        System.out.println("Generating report for business.");
+    }
     /*private final AuditTrail auditTrail;
 
     public GenerateReportTask(AuditTrail auditTrail) {
         this.auditTrail = auditTrail;
     }*/
-
+/*
     public void generate(){
         super.record(new AuditTrail());
         System.out.println("Generating report for business.");
-    }
+    }*/
 
 }
