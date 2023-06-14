@@ -31,3 +31,14 @@ Note : we can also use command pattern to implement undo mechanism instead of me
     e.g. undo video encoding etc.
 
 Note : interface can only extend other interface and not implement it which makes sense.
+
+/*
+* Note : If we are using abstract class then there is no need to
+* implement all methods of the interface which makes sense.
+* */
+
+Note: We can implement undo functionality using command pattern by storing commands in history.
+This gives a better benefit over memento because we were storing whole state in history which would
+be waste of memory in case of larger states.
+e.g. we would need to store whole VideoEditor in history in memento pattern but here we have
+   used only command object storing only the change done.

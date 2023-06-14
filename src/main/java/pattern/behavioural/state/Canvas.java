@@ -14,7 +14,7 @@ package pattern.behavioural.state;
 public class Canvas {
     private ToolType currentSelectedTool;
 
-    // From Driver class, need to pass corresponding selected object.
+    // From SolutionDriver class, need to pass corresponding selected object.
     public void mouseSelect(ToolActionSelection toolActionSelection){
         /*if(currentSelectedTool == ToolType.SELECTION)
             System.out.println("Selection icon selected");
