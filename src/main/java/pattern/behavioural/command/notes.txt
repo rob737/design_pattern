@@ -1,0 +1,31 @@
+--- why is it used?
+It's a very common and useful pattern used in the scenarios like below :
+
+Imagine a scenario where in we are designing a GUI framework.
+There is a Button class in it.
+Button class has a method called click() whose behaviour depends on the place where
+it was clicked from.
+e.g. if it is clicked via delete icon then click() should perform delete.
+     if it is clicked via update icon then click() should update etc.
+Basically, same option different behaviour.
+More or less like how we pass reference in javascript as callback to events.
+
+--- Doubt :
+Is it like strategy pattern?
+No, because in strategy pattern underlying behaviour was same like encrypt()
+but the implementation may vary.
+In command, underlying behaviour may also be different like delete, update etc for the same option.
+
+---- Structure :
+Invoker/Sender :
+Command (interface) :
+Concrete Command :
+Receiver :
+
+Note:
+I think any event driven behaviour can be designed using command pattern.
+e.g. click, submit, view etc.
+
+Note : we can also use command pattern to implement undo mechanism instead of memento pattern
+    as memento pattern stores the complete state which would be very costly to store.
+    e.g. undo video encoding etc.
