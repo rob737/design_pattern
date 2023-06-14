@@ -29,3 +29,5 @@ e.g. click, submit, view etc.
 Note : we can also use command pattern to implement undo mechanism instead of memento pattern
     as memento pattern stores the complete state which would be very costly to store.
     e.g. undo video encoding etc.
+
+Note : interface can only extend other interface and not implement it which makes sense.
