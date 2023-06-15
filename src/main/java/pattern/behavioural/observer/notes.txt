@@ -1,0 +1,19 @@
+--- why is it used?
+
+Whenever the state of an object changes, we would need to notify other objects for a change.
+e.g. SQS/TOPIC etc.
+
+
+Structure :
+
+1. Subject/Observable : The source (abstract class) that produces an event.
+2. Concrete Subject : It is like our data source class whose action is notified to Observers.
+3. Observer : The interface that listens to the event.
+4. ConcreteObserver : all subscribed concrete classes of the observer.
+
+Note: It is also known as Pub/Sub pattern.
+Subject is publisher and Observer is subscriber.
+
+---- Communication styles :
+1. Push : Subject pushes the changed data to Observers. (e.g. ActiveMQ)
+2. Pull : Observer pulls the data from Concrete Subject. (e.g. SQS) --- This is more flexible.
