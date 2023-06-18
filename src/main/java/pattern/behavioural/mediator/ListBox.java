@@ -10,11 +10,20 @@ package pattern.behavioural.mediator;
 public class ListBox extends UiControl{
     private String selection;
 
+    public ListBox(ComponentMediator mediator) {
+        super(mediator);
+    }
+
     public String getSelection() {
         return selection;
     }
 
     public void setSelection(String selection) {
         this.selection = selection;
+        // This is needed to convey which object has changed.
+        // This will enable us to make our framework generic and identify
+        // the object that is changed and in concrete Mediator class we can write the interaction
+        // with other object accordingly.
+        mediator.convey(this);
     }
 }
