@@ -1,0 +1,6 @@
+--- why is it used?
+
+Whenever we have bunch of objects that needs to talk to each other, we can leverage mediator pattern.
+
+e.g. In adminJs, we had a condition that when quiz status is active then only allow publishAsPost
+    toggle to be active and image upload CTA to be active without modifying the existing classes.
