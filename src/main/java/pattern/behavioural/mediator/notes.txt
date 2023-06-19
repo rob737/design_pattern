@@ -7,10 +7,10 @@ e.g. In adminJs, we had a condition that when quiz status is active then only al
 
 --- Structure :
 
-Mediator class (Abstract) (MA):
-Concrete Mediator (CM) :
-Colleague (Interface) (CI):
-Concrete Colleague (CC):
+Mediator class (Abstract) (MA): EventHandler
+Concrete Mediator (CM) : SignUpDialogBox
+Colleague (Interface) (CI): UiControl
+Concrete Colleague (CC): Button, CheckBox and TextBox
 
 CC -> CI -> MA
 MA <- CM -> CC
@@ -18,3 +18,13 @@ MA <- CM -> CC
 Basically, a mediator is used that facilitates interaction between objects.
 All objects communicate with each other using this mediator pattern instead of communicating directly
 to each other.
+
+--- Real world use case :
+1. Communication on some update like order status etc.
+e.g. we need to send communication from many places instead of calling communication
+     service from all the places, we can define a mediator which will take care of communication.
+
+2. Any scenario which involves pre-requisite check.
+
+3. I think thread's wait and notify mechanism can be achieved using mediator pattern
+   wherein lock object will act as mediator.
