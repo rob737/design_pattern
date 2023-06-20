@@ -1,0 +1,18 @@
+--- why is it used?
+
+whenever we need a pipeline or chain of objects to process a request.
+
+e.g. request filters or streams.
+
+
+--- Structure :
+
+Handler Abstract class (with next pointing to itself):
+Concrete Handlers :
+
+Each handler performs operations and if successful then it proceeds with next handler and so on.
+
+--- Real world use case :
+
+bulk upload functionality like we did in NS.
+first level of validation, second level of validation, business logic.
