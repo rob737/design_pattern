@@ -7,3 +7,38 @@ be included as object member.
 --- Real world use case :
 1. DOM manipulation
 2. calculating distance between two points/cities represented by object.
+
+Note: We must leverage visitor design pattern only if object's structure is stable i.e.
+      entity relationships are not changing frequently, then we
+      can have many operations on the fly on those entities.
+      However, if object structure is changing frequently then again we won't be able to follow
+      Open-Closed principle.
+
+---- Structure :
+
+Element (HtmlNode Interface)  --------------------> Visitor (Operation Interface)
+ +accept(visitor)                            +visit(ConcreteElementA)
+       ^                                     +visit(ConcreteElementB)
+       |
+       |
+       |
+       ConcreteElementA
+       +accept(visitor)
+       ConcreteElementB
+       +accept(visitor)
+       Implementation: visitor.visit(this);
+
+ Note: It uses method overloading to get the work done.
+
+ Note: Whenever we need to support/create new operation then we would just need to create new class
+       implementing Visitor interface.
+
+-- Doubt?
+ So, basically new operation is denoted by new concrete element.
+ Solution : Yes
+
+ --- Real world use case :
+
+ 1. Request tracing i.e. whichever entity was involved in an operation can be tracked using this operation.
+    No particular entity/object needs to have trace method, we can leverage visitor pattern to
+    create trace operation at run time to get the job done.

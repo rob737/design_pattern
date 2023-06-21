@@ -6,8 +6,8 @@ package pattern.behavioural.visitor;
 * Thus, violating Open-Closed Principle.
 * Also, logic for highlight method is spread over different classes which is redundant as
 * highlight would have the same behaviour across all classes.
-* Visitor pattern can be used to mitigate this issue.
+* Visitor pattern can be used to mitigate above issues.
 * */
 public interface HtmlNode {
-    void highlight();
+    void execute(Operation operation);
 }

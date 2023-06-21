@@ -10,8 +10,8 @@ public class HtmlDocument {
         htmlNodes.add(node);
     }
 
-    public void highlight(){
-        for (HtmlNode node : htmlNodes)
-            node.highlight();
+    public void executeOperation(Operation operation){
+        for(HtmlNode node : htmlNodes)
+            node.execute(operation);
     }
 }
