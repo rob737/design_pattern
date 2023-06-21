@@ -1,0 +1,9 @@
+--- why is it used?
+It allows us to add new operations in object structure without modifying it.
+
+It is very useful for operations where in we need to compute something leveraging object members but that's not essentially
+be included as object member.
+
+--- Real world use case :
+1. DOM manipulation
+2. calculating distance between two points/cities represented by object.
