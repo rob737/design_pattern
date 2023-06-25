@@ -1,0 +1,30 @@
+--- We start with structural pattern now.
+structural pattern basically gives us the blueprint for organizing classes while
+behavioural pattern gave us the blueprint for communication between objects to adhere to Single Responsiblity
+and Open-Closed principle.
+
+--- Where composite pattern is used?
+
+It is used when we have to represent a hierarchy and form groups.
+Operation can be on the whole group or on individual constituents, if it is on the whole group
+then that operation must be applied to each constituent of that group as well.
+
+e.g. folder copy or delete.
+
+-- Doubt : Why is it not behavioural pattern?
+Answer : Behavioural pattern is the next step, first step is to group/structure objects
+in such a way that consequently behaviour pattern can be applied.
+
+--- Structure :
+
+Basically, the idea is to move common operation to a base class or interface
+such that we can call that method on a common object instead of type casting like in Group.java
+
+Component (Interface or class) : Common operation (e.g. render) would be present in this class/interface.
++operation()
+
+Leaf : Basic Unit of structure (e.g. Shape)
++operation()
+
+Composite: Composite object may contain 0 or more Components (e.g. Group)
++operation()
