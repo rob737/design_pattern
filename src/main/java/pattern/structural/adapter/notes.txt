@@ -9,3 +9,16 @@ But, the problem is that the interface of external library is different from our
 use adapter pattern to convert interface of external library to conform to our needs.
 
 e.g. Software drivers must be using adapter pattern to convert base interface into required interface.
+
+--- Structure :
+
+Basically, the idea is to introduce a new class that will act as transformer
+from one object into another.
+
+Note: We use composition here.
+
+--- Real world use case :
+
+1. Payment options : When we leverage different payment methods then interface of those
+can be different from the one which we have created, we can leverage adapter pattern
+to use different payment libraries.
