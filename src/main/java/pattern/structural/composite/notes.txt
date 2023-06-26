@@ -28,3 +28,9 @@ Leaf : Basic Unit of structure (e.g. Shape)
 
 Composite: Composite object may contain 0 or more Components (e.g. Group)
 +operation()
+
+
+--- Real world use case :
+
+1. RBAC system : Role based access system wherein we can assign role to a certain group and
+each individual in that group must be granted that role.

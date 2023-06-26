@@ -1,0 +1,11 @@
+--- why is it used?
+
+Convert interface of an object to a different form as per our need.
+
+Example : We are applying filter to a loaded image, we have created a filter interface for some
+but we need to use a library to support a wide range of filters.
+
+But, the problem is that the interface of external library is different from ours so we need to
+use adapter pattern to convert interface of external library to conform to our needs.
+
+e.g. Software drivers must be using adapter pattern to convert base interface into required interface.
