@@ -1,0 +1,21 @@
+--- why is it used?
+
+It is a very powerful and useful design pattern that can be used to add operations to an object
+at runtime.
+
+e.g. let's say we have to store data to cloud,
+there can be certain situations in it.
+
+1. Store data in plain text.
+2. Store data in encrypted format.
+3. Store data after compressing it.
+4. Store data in combination of encryption and compression.
+
+One naive approach is to create subclasses for each of the requirements but that
+could quickly become unmaintainable.
+
+Decorator pattern can be leveraged in above situations to add operations at runtime
+to single concrete class instead of creating new classes for each use case.
+
+--- Doubt :
+Can't we use visitor pattern for this use case?
