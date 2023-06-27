@@ -19,3 +19,13 @@ to single concrete class instead of creating new classes for each use case.
 
 --- Doubt :
 Can't we use visitor pattern for this use case?
+Answer : No, that is behaviour pattern where in we have assumed that structure is already properly created.
+But the one that we are dealing with here is structural pattern itself.
+
+--- Structure :
+
+Component (Interface) : operation method
+Concrete Component : implementing the Component interface
+Decorator : Using Composition, call Interface Component's operation method.
+
+basically, decorator is decorating the concrete component using composition.

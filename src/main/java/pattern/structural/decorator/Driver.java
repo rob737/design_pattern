@@ -9,9 +9,21 @@ public class Driver {
     * Instead, we can leverage decorator pattern to achieve it in a maintainable way.
     * */
     public static void main(String[] args) {
-        CloudStream cloudStream = new CloudStream();
+        /* CloudStream cloudStream = new CloudStream();
         cloudStream.write("Decorator pattern implementation.");
         cloudStream = new EncryptedCloudStream();
-        cloudStream.write("Decorator pattern implementation.");
+        cloudStream.write("Decorator pattern implementation.");*/
+
+        /*
+        * Basically, we decorated CloudStream concrete component with EncryptedCloudStream by wrapping up CloudStream object
+        * within EncryptedCloudStream object.
+        *
+        * We are decorating CloudStream object with combination of multiple objects.
+        * */
+        storeCreditCard(new CompressedData(new EncryptedCloudStream(new CloudStream())));
+    }
+
+    private static void storeCreditCard(CloudStreamPlaceholder cloudStream) {
+        cloudStream.write("1234-5678-1243-8790");
     }
 }
