@@ -9,6 +9,7 @@ public class Editor {
                 new Artefact("EmailProvider"),
         };
 
+        // Decorating base artefact with multiple markers, this is impossible with inheritance.
         artefacts[0] = new MainMarker(new ErrorMarker(artefacts[0]));
         artefacts[2] = new MainMarker(artefacts[2]);
 
