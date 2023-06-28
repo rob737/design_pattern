@@ -1,7 +1,10 @@
 --- why is it used?
 
 It is a very powerful and useful design pattern that can be used to add operations to an object
-at runtime.
+at runtime by wrapping it in one or more decorator classes (e.g.
+CloudStream is wrapped up inside EncryptedCloudStream etc.
+).
+It provides an alternative to subclassing for extending the behavior of an object at runtime.
 
 e.g. let's say we have to store data to cloud,
 there can be certain situations in it.
@@ -29,3 +32,10 @@ Concrete Component : implementing the Component interface
 Decorator : Using Composition, call Interface Component's operation method.
 
 basically, decorator is decorating the concrete component using composition.
+
+--- Real world use case :
+
+1. Logger : Logger input can be decorated to log different objects.
+2. KYC validation : validation can be the re-usable concrete component that can be decorated with
+    different type of inputs.
+3. Middleware in frameworks.
