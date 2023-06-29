@@ -1,0 +1,23 @@
+---- Why is it used?
+
+It is used in scenarios where there are large number of objects and it consumes large space.
+Using flyweight pattern, we can reduce the amount of memory consumed by these objects.
+
+
+Basically, the idea is to share some common properties and reduce redundancy instead of
+duplicating that property in each instance of the object.
+e.g. In our example, pointType and icon can be shared among point objects instead of
+having it as member in point object.
+Icon depends on PointType and so each point doesn't need to have a separate copy of icon.
+
+Flyweight is basically the shared object.
+
+---- Structure :
+
+Flyweight Object : The shared object.
+Factory : To get flyweight object or create if it doesn't exist.
+Service : To interact with Factory to get flyweight object.
+
+--- Real world use case :
+
+Any business flow in app that has the potential to have bulky objects at runtime.
