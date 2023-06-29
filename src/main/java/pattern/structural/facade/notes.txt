@@ -1,0 +1,31 @@
+--- Why facade pattern is used?
+
+Facade means the interaction interface i.e. the first point of interaction between internal and
+external system.
+
+e.g. load balancer is a facade to client to access backend servers.
+
+So, we use this pattern whenever we have to provide an interface to an external client
+for complex underlying system.
+
+Example : let's assume, we need to send push notification to server.
+
+Following are the steps :
+1. Connect to a server
+2. Authenticate yourselves
+3. send message
+4. disconnect from the server.
+
+So, everytime if we want to send a notification then we would need to follow above 4 steps.
+We can leverage facade pattern to provide an interface for sending push notification hiding
+low level details (basically this is what abstraction is all about.)
+
+--- Structure :
+
+Basically client code interacts with a single class (e.g. NotificationService) that exposes bare minimum method to client
+and takes care of all the low level details.
+
+--- Real world use case :
+
+1. Connecting to DB
+2. Sending notification.
