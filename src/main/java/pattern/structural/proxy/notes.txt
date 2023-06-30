@@ -1,0 +1,34 @@
+--- why is it used?
+
+It is a very useful pattern used in scenarios where one object (source) interacts with other target object.
+
+Instead of letting source object directly interact with target object, we can introduce a proxy object
+in between that can be used for logging, authenticating, lazy loading etc.
+
+
+---- Structure :
+
+Client -------------------> Subject (Interface) with request method
+                                ^
+                                |
+                                |
+                                |
+              - - - - - - - - - - - -  - - -  - - - - -
+              |                                        |
+         Real Subject < --------- forwards to ------ Proxy
+          +request()                                  +request()
+
+Subject Interface must have all the methods defined that needs to be used by Client.
+
+Note :
+Subject is equivalent to EbookBlueprint interface.
+Client is equivalent to Library class.
+Proxy is equivalent to EbookProxy class.
+Real Subject is equivalent to ConcreteEbook class.
+
+--- Real world use case :
+
+1. Client/Server communication.
+2. Authentication.
+3. Rate limiting.
+4. Lazy loading.
