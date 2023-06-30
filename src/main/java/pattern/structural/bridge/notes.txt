@@ -1,0 +1,19 @@
+--- Why is it used ?
+
+Bridge pattern is used wherever we need to build simple but flexible hierarchy that can be
+distinguished between feature and implementation hierarchy.
+
+--- How to identify ?
+whenever hierarchy or use cases grows into two different dimensions then we would need to separate
+it in separate feature and implementation hierarchy.
+
+feature hierarchy interacts with implementation hierarchy using composition
+and that is why it is called bridge pattern.
+
+e.g. Remote control and advanced remote control is feature hierarchy.
+     SonyRemoteControl and SonyAdvancedRemote control is implementation hierarchy.
+
+---- Real world use cases :
+1. Software Drivers
+2. User category in NS like basic, platinum, gold etc are the features and usertype like doctor, student,
+    chemist etc are the implementations.
