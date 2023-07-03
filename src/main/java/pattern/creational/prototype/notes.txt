@@ -1,1 +1,17 @@
---- Why is it used?
+--- Why creational pattern is used?
+It is used to define blueprints that needs to be followed while creating objects.
+
+--- Why prototype pattern is used?
+It is used when we need to create new objects by copying existing objects.
+e.g. clone.
+
+
+--- Structure :
+
+Prototype (Interface) : The blueprint that needs to be cloned
+Concrete Prototype : Concrete implementation of prototype.
+Client : Talks to Prototype interface to trigger clone operation.
+
+--- Real world use case :
+1. Copying url.
+2. Copying image.
