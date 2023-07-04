@@ -1,0 +1,17 @@
+--- why is it used?
+To ensure that a class has a single instance.
+e.g. logger object, Config manager etc.
+
+--- Structure :
+
+Singleton class must contain following members :
+
+1. instance : private static field of type mentioned Class.
+2. "private" Constructor : Such that we cannot create instance of the class from outside.
+3. getInstance() : public static method that returns instance or create for the first time.
+
+
+--- Real world use case :
+1. Class that would store system settings for our App.
+2. Bulky object that has common properties that can be shared across objects.
+    e.g. Cache or Rate limiter.
