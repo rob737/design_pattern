@@ -1,0 +1,15 @@
+--- why is it used?
+To defer the creation of object to subclasses.
+
+--- Structure :
+
+Creator (Abstract class) : operation() and factoryMethod(), operation() calls factoryMethod().
+ConcreteCreator : factoryMethod() : It has the actual implementation for creating objects.
+
+
+Use case :
+
+1. Creating a new web framework like Spring/Django/Express etc.
+
+Note: We cannot override static methods in Java.
+Factory design pattern basically uses inheritance and polymorphism to provide elegant solution.
