@@ -3,7 +3,8 @@ To defer the creation of object to subclasses.
 
 --- Structure :
 
-Creator (Abstract class) : operation() and factoryMethod(), operation() calls factoryMethod().
+Creator (Abstract class/Normal class) : operation() (e.g. schedule()) and factoryMethod() (e.g. getCalendar()),
+                           operation() calls factoryMethod().
 ConcreteCreator : factoryMethod() : It has the actual implementation for creating objects.
 
 
