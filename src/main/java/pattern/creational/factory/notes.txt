@@ -7,9 +7,14 @@ Creator (Abstract class) : operation() and factoryMethod(), operation() calls fa
 ConcreteCreator : factoryMethod() : It has the actual implementation for creating objects.
 
 
-Use case :
-
-1. Creating a new web framework like Spring/Django/Express etc.
 
 Note: We cannot override static methods in Java.
 Factory design pattern basically uses inheritance and polymorphism to provide elegant solution.
+
+
+Real world use case :
+
+1. Creating a new web framework like Spring/Django/Express etc.
+2. Creating Driver classes.
+3. Since, basically the work of factory pattern is to delegate object creation to subclasses at runtime,
+  it can be used for dependency injection as well.
