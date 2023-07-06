@@ -23,6 +23,22 @@ Also, an interface can't implement other interface, it can only extend it.
 We have two components : factory methods for creating family and abstract factory (interface)
                          providing those methods.
 
- AbstractFactory (Interface) : contains factory methods like createFamilyOne(), createFamilyTwo() etc.
+ AbstractFactory (Interface) (e.g. WidgetFactory Interface) :
+ contains factory methods like createComponentOne() (e.g. createButton()),
+ createComponentTwo() (e.g. createTextBox()) etc.
 
  ConcreteFactory classes : Count depends on the number of families that needs to be created.
+ e.g. MaterialWidgetFactory is a concrete class that creates a family of material objects i.e.
+ material theme operation performed on a group of components.
+
+
+ --- Real world use case :
+
+ 1. Create beans in Spring e.g. common operation is annotation applied and components are
+    wherever it is applied.
+
+ 2. Connection pooling
+
+ 3. Sending something to different downstream.
+
+ 4. Payment gateway : e.g. pay() is the operation and components are Gpay, PhonePe etc.
