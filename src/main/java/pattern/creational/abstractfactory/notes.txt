@@ -1,0 +1,28 @@
+--- why is it used?
+
+It provides an interface for creating families of related objects.
+
+Example : let's say we want to apply a filter to all components within a widget then
+all components are a family of widget(related object) and one of the filter
+would be applied to whole family.
+
+So, one family is basically combination of filter and components.
+same components can be applied a different filter and it will be treated as different family.
+
+Basically, the use case is when you have to apply some operation to a list of components.
+we can leverage abstract factory pattern.
+
+
+NOTE ::::::::: Abstract factory is not related to factory method. :::::::::
+
+Also, an interface can't implement other interface, it can only extend it.
+
+
+---- Structure :
+
+We have two components : factory methods for creating family and abstract factory (interface)
+                         providing those methods.
+
+ AbstractFactory (Interface) : contains factory methods like createFamilyOne(), createFamilyTwo() etc.
+
+ ConcreteFactory classes : Count depends on the number of families that needs to be created.
