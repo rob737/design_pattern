@@ -1,0 +1,6 @@
+--- why is it used?
+To separate the construction of an object from it's representation i.e.
+it will create the object and how those objects are being used is dependent on the use case.
+
+e.g. let's say you want to export your powerpoint presentation in different formats.
+for each export type, you would need to create objects and do some repetitive work.
