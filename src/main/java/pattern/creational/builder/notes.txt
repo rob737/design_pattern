@@ -4,3 +4,42 @@ it will create the object and how those objects are being used is dependent on t
 
 e.g. let's say you want to export your powerpoint presentation in different formats.
 for each export type, you would need to create objects and do some repetitive work.
+
+In this use case, construction of an object is basically constructing export object
+e.g. { for (Slide slide : slides) pdfDocument.addPage(slide.getText()); }
+
+and representation is basically specific format of export i.e. whether it's PDF or movie etc.
+
+So, the aim of builder interface is to separate construction and representation by providing
+a common interface for integrating separate representations(components) for a particular use case.
+
+In general terms, construction is assembling of computer components (separate interface)
+while representation is different components with different intrinsic properties.
+
+
+---- Structure :
+
+(e.g. Presentation class)
+Director class ----------------------> Builder interface (e.g. PresentationBuilder interface)
++construct()                            +buildPart()
+                                             ^
+                                             |
+                                             |
+                                             |
+                                        ConcreteBuilder (e.g. PdfDocumentBuilder)
+                                          +buildPart()
+                                          +getResult()
+
+Note : It is basically separating integration from individual construction.
+construct() method is for integration.
+ConcreteBuilder's buildPart() method is for individual object creation.
+
+--- Real world use case :
+
+1. String builder
+2. URL builder
+
+3. Order and adding to cart so cart is the integration and order is the individual component.
+
+Note : The Builder pattern is particularly useful in scenarios where the creation of an object
+       involves multiple steps or configuration options.
