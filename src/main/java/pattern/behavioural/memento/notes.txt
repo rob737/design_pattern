@@ -23,4 +23,4 @@ That's why it was violating Single Responsibility pattern.
 
 --- Real world use case ---
 1. Undo operation
-2. Git reset to previous commit. (blog on this)
+2. Git revert to previous commit. (blog on this)
