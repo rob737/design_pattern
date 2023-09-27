@@ -4,6 +4,7 @@ package pattern.blogs.behavioural.memento;
 public class CheckIn {
     private final CommitHistory commitHistory = new CommitHistory();
 
+
     public void commitRecord(Commit commit) {
         commitHistory.storeCommit(commit);
     }
@@ -15,6 +16,4 @@ public class CheckIn {
     public Commit loadLatestSnapshot() {
         return commitHistory.getLatestCommit();
     }
-
-
 }
