@@ -1,21 +1,19 @@
 package pattern.blogs.behavioural.memento;
 
-// Memento which signifies the Element that would be reverted.
+/*
+* Memento : This is the object defining the changes in each commit.
+* */
 public class Commit {
-    private int id;
-    private String Description;
+    // We have the same field as originator because we need to keep track of changes.
+    private final String content;
 
-    public Commit(int id, String description) {
-        this.id = id;
-        Description = description;
+    public Commit(String content) {
+        this.content = content;
     }
 
-    @Override
-    public String toString() {
-        final StringBuffer sb = new StringBuffer("Commit{");
-        sb.append("id=").append(id);
-        sb.append(", Description='").append(Description).append('\'');
-        sb.append('}');
-        return sb.toString();
+    public String getContent(){
+        return content;
     }
+
+
 }

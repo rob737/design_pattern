@@ -1,19 +1,26 @@
 package pattern.blogs.behavioural.memento;
 
-// Originator Class which initiates the Revert/Undo operation.
+/*
+* Originator as it is the one creating the memento.
+* */
 public class CheckIn {
-    private final CommitHistory commitHistory = new CommitHistory();
+    private String content;
+    private final CommitLog commitLog = new CommitLog();
 
-
-    public void commitRecord(Commit commit) {
-        commitHistory.storeCommit(commit);
+    // This commit (memento) can be stored in history.
+    void checkInChanges(String commitContent){
+        this.content = commitContent;
+        // Delegating to commitLog class.
+        commitLog.logCommit(new Commit(commitContent));
     }
 
-    public void revert(){
-        commitHistory.revertCommit();
+    String revert(){
+        this.content = commitLog.revertCommit().getContent();
+        return content;
     }
 
-    public Commit loadLatestSnapshot() {
-        return commitHistory.getLatestCommit();
+    public String getContent() {
+        return content;
     }
+
 }
