@@ -17,8 +17,19 @@ Use strategy pattern when one state can leverage multiple strategies to get the 
  It is particularly useful when you have multiple algorithms that achieve the same goal
  but have different implementations or performance characteristics.
 
+
+Actors are same as State pattern :
+
+1. Context: The class which accepts user selected strategy from client program.
+
+2. Strategy Interface: The exposed behavior that would be used to perform business operation like pay, encrypt etc.
+
+3. Concrete Strategy Implementation: Class representing the actual implementation of a strategy.
+
 Real world use case :
 1. Image resize in different format as we did in NS.
 2. Cancel order can use strategy pattern as order cancel option can be achieved
     automatically, manually, in case of errors.
     To word it differently, what strategy will you use to cancel order.
+
+3. Order payment via COD, UPI etc.
