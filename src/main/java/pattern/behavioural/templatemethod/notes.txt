@@ -16,7 +16,7 @@ each developer code in their style and also promote re-usability.
 
 Structure :
 
-Abstract class : templateMethod(), primitiveOperation1(), primitiveOPeration2()
+Abstract class : templateMethod(), protected abstract primitiveOperation1(), protected abstract primitiveOPeration2()
 Concrete class : implementation of primitiveOPeration1() and primitiveOperation2()
 
 Note : Hook methods are the methods that has a default implementation in the base class.
@@ -32,6 +32,7 @@ Note : so, we can use template method wherever there are certain operations whic
 1. write a blog for order status scenario as we did in NS.
 2. Template method can be used to deign beforeEach, afterEach in Junit test cases.
 3. BeforeHook and AfterHook in adminjs.
+4. Authentication mechanism on every API call.
 
 Note: private methods are not inherited by subclasses.
 Note: protected methods are visible only to inherited classes across anywhere and to classes in same package.
