@@ -1,5 +1,7 @@
 --- why is it used?
 To defer the creation of object to subclasses.
+This would be leveraged in use cases where we need to provide a common library that will be used
+for different use cases like db driver library can be used for postgres, mysql etc connections.
 
 --- Structure :
 
