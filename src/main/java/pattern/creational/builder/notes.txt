@@ -43,3 +43,21 @@ ConcreteBuilder's buildPart() method is for individual object creation.
 
 Note : The Builder pattern is particularly useful in scenarios where the creation of an object
        involves multiple steps or configuration options.
+
+Builder can be leveraged in scenarios where different types of configurations (objects) are created
+based on the dynamic requirement.
+e.g. consider a build pipeline for staging environment, here you need to have object for unit test, seeder, migration etc.
+Now, if we need to have pipeline for production environment, then we can have objects created for different activities
+like unit test, coverage test, vulnerability test etc.
+
+So, we are creating objects as per the configuration and then integrating it at runtime.
+
+To sum up, there are basically 3 actors.
+
+1. Prototype
+2. Individual components
+3. Assembler
+
+Assembler is supplied with individual components and a prototype.
+Based on the prototype, corresponding component's property would be leveraged to create something
+and finally assembled into a desired result.
