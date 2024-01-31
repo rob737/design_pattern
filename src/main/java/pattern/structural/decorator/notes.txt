@@ -31,7 +31,8 @@ Component (Interface) : operation method
 Concrete Component : implementing the Component interface
 Decorator : Using Composition, call Interface Component's operation method.
 
-basically, decorator is decorating the concrete component using composition.
+This pattern is basically useful when we have to reuse existing method but with different types of input
+or we need to execute a set of operations like list of middlewares.
 
 --- Real world use case :
 
@@ -39,3 +40,19 @@ basically, decorator is decorating the concrete component using composition.
 2. KYC validation : validation can be the re-usable concrete component that can be decorated with
     different type of inputs.
 3. Middleware in frameworks.
+
+
+Note : LSP (Liskov's Substitution Principle) basically states that subclasses should not tamper with
+implementation of overridden methods and must leave it as it is.
+This is to ensure that methods present in super class behaves in the same way irrespective of the fact that
+it was called from super class or sub class.
+
+e.g. Rectangle is a super class with method setWidth() , if we create a sub class of it say Square
+and override setWidth() method and change it's implementation then it violates LSP.
+
+Ideally, we should not override in this case as we are not reusing super class' method anyways.
+
+Extension, Not Modification: Overriding methods should extend or
+specialize the behavior of the superclass method, not fundamentally change it.
+If the subclass method changes the behavior in a way that
+contradicts the expected behavior of the superclass method, it violates LSP.
