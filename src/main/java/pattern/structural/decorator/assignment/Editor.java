@@ -6,7 +6,7 @@ public class Editor {
                 new Artefact("Main"),
                 new Artefact("Demo"),
                 new Artefact("EmailClient"),
-                new Artefact("EmailProvider"),
+                new Artefact("EmailProvider")
         };
 
         // Decorating base artefact with multiple markers, this is impossible with inheritance.
