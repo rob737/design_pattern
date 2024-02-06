@@ -13,9 +13,9 @@ Basically, the use case is when you have to apply some operation to a list of co
 we can leverage abstract factory pattern.
 
 
-NOTE ::::::::: Abstract factory is not related to factory method. :::::::::
+NOTE ::::::::: Abstract factory is not related to factory method design pattern. :::::::::
 
-Also, an interface can't implement other interface, it can only extend it.
+NOTE :: In Java, an interface can't implement other interface, it can only extend it.
 
 
 ---- Structure :
@@ -30,6 +30,8 @@ We have two components : factory methods for creating family and abstract factor
  ConcreteFactory classes : Count depends on the number of families that needs to be created.
  e.g. MaterialWidgetFactory is a concrete class that creates a family of material objects i.e.
  material theme operation performed on a group of components.
+
+ Note: one family is basically operation + components.
 
 
  --- Real world use case :
