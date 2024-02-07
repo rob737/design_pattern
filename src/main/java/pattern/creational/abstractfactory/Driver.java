@@ -7,6 +7,7 @@ import pattern.creational.abstractfactory.material.MaterialWidgetFactory;
 public class Driver {
     public static void main(String[] args) {
         ContactFrom contactFrom = new ContactFrom();
-        contactFrom.render(new AntWidgetFactory());
+        // render a family of Ant Themed widget.
+        contactFrom.render(new MaterialWidgetFactory());
     }
 }
