@@ -2,7 +2,7 @@
 It is used to define blueprints that needs to be followed while creating objects.
 
 --- Why prototype pattern is used?
-It is used when we need to create new objects by copying existing objects.
+It is used when we need to give provision to create new objects by copying existing objects.
 e.g. clone.
 
 
@@ -15,3 +15,5 @@ Client : Talks to Prototype interface to trigger clone operation.
 --- Real world use case :
 1. Copying url.
 2. Copying image.
+3. Multiple beans of same type.
+4. Provision to clone anything.
