@@ -15,5 +15,6 @@ Client : Talks to Prototype interface to trigger clone operation.
 --- Real world use case :
 1. Copying url.
 2. Copying image.
-3. Multiple beans of same type.
+3. Multiple beans of same type e.g. Connection objects in Connection pool.
 4. Provision to clone anything.
+5. Utility to copy something.
