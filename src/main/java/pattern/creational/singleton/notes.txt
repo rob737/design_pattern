@@ -15,3 +15,5 @@ Singleton class must contain following members :
 1. Class that would store system settings for our App.
 2. Bulky object that has common properties that can be shared across objects.
     e.g. Cache or Rate limiter.
+
+ Doubt : How can we have private constructor as all objects extends Object class?
