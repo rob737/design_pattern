@@ -7,6 +7,5 @@ public class Driver {
 
         System.out.println(beanContext);
         System.out.println(clonedBean);
-
     }
 }
