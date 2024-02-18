@@ -8,14 +8,25 @@ but we need to use a library to support a wide range of filters.
 But, the problem is that the interface of external library is different from ours so we need to
 use adapter pattern to convert interface of external library to conform to our needs.
 
-e.g. Software drivers must be using adapter pattern to convert base interface into required interface.
-
 --- Structure :
 
 Basically, the idea is to introduce a new class that will act as transformer
 from one object into another.
 
-Note: We use composition here.
+Native Component: This is the interface which provide APIs that can be leveraged to perform certain operations
+based on the use case.
+
+Foreign Component: This is the external component that provides the same functionality as Native component
+but has a different API contract.
+
+Client : This is the component that would need to leverage native as well as foreign component according
+to a predefined contract.
+
+Adapter : This is the component that acts as a facilitator and provides an exposed API to facilitate
+communication between client and foreign component but in the contract that client already understands.
+
+Note: We use composition here. More specifically, we leverage dependency injection in adapter class to facilitate
+communication between source and destination objects.
 
 --- Real world use case :
 
