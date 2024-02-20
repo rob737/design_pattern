@@ -13,6 +13,21 @@ and that is why it is called bridge pattern.
 e.g. Remote control and advanced remote control is feature hierarchy.
      SonyRemoteControl and SonyAdvancedRemote control is implementation hierarchy.
 
+Note: Basically the problem that bridge pattern is solving is this :
+You have a hierarchy or different levels of features that needs to be supported
+e.g. let's say you need to support 2 types of remote controls (basic, premium) so each vendor
+whoever gets onboarded need to have 2 separate implementations i.e one for basic and one for premium.
+
+Now, if we introduce a new feature called AIgen then each vendor would need to have 3 separate implementations.
+Thus, with introduction of new feature, many redundant implementation classes would increase.
+
+Thus, if we have hierarchy of features that needs to be supported by different implementations then bridge
+pattern is the way to go.
+i.e. we have a hierarchy of features and corresponding to it, we have hierarchy of implementations.
+
+In our implementation, Device interface is acting as a bridge between feature hierarchy and implementation hierarchy.
+hence, it is called bridge pattern.
+
 ---- Real world use cases :
 1. Software Drivers
 2. User category in NS like basic, platinum, gold etc are the features and usertype like doctor, student,
