@@ -1,6 +1,7 @@
 package pattern.blogs.structural.bridge;
 
 public class Patient implements User{
+
     @Override
     public void buyMedicine(String medicineName) {
         System.out.println("Patient bought medicine : " + medicineName);
