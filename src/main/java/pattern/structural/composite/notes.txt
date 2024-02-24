@@ -26,7 +26,7 @@ Component (Interface or class) : Common operation (e.g. render) would be present
 Leaf : Basic Unit of structure (e.g. Shape)
 +operation()
 
-Composite: Composite object may contain 0 or more Components (e.g. Group)
+Composite: Composite object may contain 0 or more Leaf (e.g. Group)
 +operation()
 
 

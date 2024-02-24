@@ -19,8 +19,8 @@ public class Driver {
         root.add(firstGroup);
         root.add(secondGroup);
 
-        /*firstGroup.render();
-        secondGroup.render();*/
-        root.render();
+        firstGroup.render();
+        //secondGroup.render();
+       // root.render();
     }
 }

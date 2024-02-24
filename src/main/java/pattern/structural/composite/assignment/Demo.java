@@ -17,7 +17,7 @@ public class Demo {
     team.add(subTeam1);
     team.add(subTeam2);
 
-    team.deploy();
+    subTeam1.deploy();
   }
 
   public static void individualShow(){
