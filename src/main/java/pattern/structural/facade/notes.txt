@@ -29,3 +29,5 @@ and takes care of all the low level details.
 
 1. Connecting to DB
 2. Sending notification.
+3. Exposing API for other vendors to use our service. (create connection, authenticate requests,
+do intended operation, close connection).
