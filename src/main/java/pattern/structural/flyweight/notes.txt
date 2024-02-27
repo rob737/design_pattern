@@ -14,10 +14,17 @@ Flyweight is basically the shared object.
 
 ---- Structure :
 
-Flyweight Object : The shared object.
-Factory : To get flyweight object or create if it doesn't exist.
-Service : To interact with Factory to get flyweight object.
+Flyweight Object : The shared object. (e.g. PointIcon, FontStyle )
+Factory : To get flyweight object or create if it doesn't exist. (e.g. PointFactory)
+Service : To interact with Factory to get flyweight object. (e.g. PointService)
 
 --- Real world use case :
 
-Any business flow in app that has the potential to have bulky objects at runtime.
+Any business flow in app that has the potential to have bulky objects at runtime which can be shared.
+e.g.
+1. Currency Exchange Rate Object in every payment settlement flow.
+i.e. Let's say we have a service to facilitate money transfer from one country to another
+so for each payment object that represents a user transaction must have reference of Currency
+Exchange Object.
+However, since this currency Exchange object will be same across all instances of payment so it
+can be shared rather than creating duplicates of it.
