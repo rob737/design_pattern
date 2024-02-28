@@ -8,9 +8,10 @@ public class PaymentFactory {
 
 
     public CurrencyExchange getCurrencyExchange(String key){
-        if(currencyExchangeCache.get(key) != null)
-            return currencyExchangeCache.get(key);
-        String[] currencies = key.split(":");
-        return new CurrencyExchange(currencies[0],currencies[1]);
+        if(currencyExchangeCache.get(key) == null){
+            String[] currencies = key.split(":");
+            currencyExchangeCache.put(key,new CurrencyExchange(currencies[0],currencies[1]));
+        }
+        return currencyExchangeCache.get(key);
     }
 }
