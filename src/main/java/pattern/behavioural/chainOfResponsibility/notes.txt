@@ -16,3 +16,14 @@ Each handler performs operations and if successful then it proceeds with next ha
 
 bulk upload functionality like we did in NS.
 first level of validation, second level of validation, business logic.
+
+Create a build pipeline where in there are steps like migration, seeder, unit tests, security vulnerability
+and if any of this fails then stop processing.
+
+Doubt : Isn't it similar to Decorator pattern?
+
+Well, it looks similar but Decorator pattern is structural pattern while Chain of Responsibility
+is behavioural pattern.
+Also, use case is different.
+Decorator pattern is basically to reduce number of subclasses while chain of responsibility is
+to leverage already created classes to perform a chain of operations.

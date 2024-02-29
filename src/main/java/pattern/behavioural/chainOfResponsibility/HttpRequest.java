@@ -1,7 +1,8 @@
 package pattern.behavioural.chainOfResponsibility;
 
 public class HttpRequest {
-    private String username, password;
+    private final String username;
+    private final String password;
 
     public HttpRequest(String username, String password) {
         this.username = username;

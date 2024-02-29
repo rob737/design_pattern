@@ -1,9 +1,9 @@
 package pattern.behavioural.chainOfResponsibility;
 
 /*
-* I this use case, whenever we get any request on a server.
+* In this use case, whenever we get any request on a server.
 * We need to perform couple of operations on it i.e. a pipeline is created on request object.
-* The commented code works perfectly fine but let's say if we want to disable one the operation
+* The commented code works perfectly fine but let's say if we want to disable one of the operation
 * in pipeline then we would need to come back to this class and modify it.
 * Thus, violating Open For Extension and closed for modification principle.
 * */
