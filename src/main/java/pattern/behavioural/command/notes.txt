@@ -19,7 +19,7 @@ In command, underlying behaviour may also be different like delete, update etc f
 ---- Structure :
 Invoker/Sender :
 Command (interface) :
-Concrete Command :
+Concrete Command implementation :
 Receiver :
 
 Note:
