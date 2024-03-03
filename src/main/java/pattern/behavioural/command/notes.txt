@@ -17,10 +17,10 @@ but the implementation may vary.
 In command, underlying behaviour may also be different like delete, update etc for the same option.
 
 ---- Structure :
-Invoker/Sender :
-Command (interface) :
-Concrete Command implementation :
-Receiver :
+Invoker/Sender : We can think of it as the source of event.
+Command (interface) : We can think of it as the event.
+Concrete Command implementation : Depending on the source, it will identify receiver to perform the operation.
+Receiver : We may think of it as the event listener.
 
 Note:
 I think any event driven behaviour can be designed using command pattern.
@@ -42,3 +42,15 @@ This gives a better benefit over memento because we were storing whole state in 
 be waste of memory in case of larger states.
 e.g. we would need to store whole VideoEditor in history in memento pattern but here we have
    used only command object storing only the change done.
+
+  ---- Real world use case :
+
+  1. It can be used for Observability  :
+
+  Let's say you are creating a service like newrelic where in different performance metrics can be monitored
+  for different components.
+  Each metric can be represented via a command, issuer can be the newrelic dashboard and receiver would
+  be the component on which monitoring is being done.
+
+
+
