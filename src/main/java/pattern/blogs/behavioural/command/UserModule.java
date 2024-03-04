@@ -7,6 +7,5 @@ public class UserModule implements ApplicationConstruct {
     @Override
     public void execute() {
         System.out.println("UserModule is being evaluated.");
-
     }
 }
