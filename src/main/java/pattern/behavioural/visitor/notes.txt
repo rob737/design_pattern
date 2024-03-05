@@ -34,7 +34,7 @@ Element (HtmlNode Interface)  --------------------> Visitor (Operation Interface
        implementing Visitor interface.
 
 -- Doubt?
- So, basically new operation is denoted by new concrete element.
+ So, basically new operation is denoted by new concrete element implementing Visitor interface.
  Solution : Yes
 
  --- Real world use case :
@@ -43,4 +43,4 @@ Element (HtmlNode Interface)  --------------------> Visitor (Operation Interface
     No particular entity/object needs to have trace method, we can leverage visitor pattern to
     create trace operation at run time to get the job done.
 
-2. Garbage collection.
+2. Garbage collection. : Marking entities whose memory needs to be relinquished.
