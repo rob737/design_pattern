@@ -1,6 +1,10 @@
 package pattern.behavioural.mediator;
 
-
+/*
+* This is the class that would act as event handler which in turn decides
+* the actions that needs to be performed based on the source of the event.
+*
+* */
 public class MediatorImpl extends ComponentMediator{
     private ListBox listBox = new ListBox(this);
     private TextBox textBox = new TextBox(this);

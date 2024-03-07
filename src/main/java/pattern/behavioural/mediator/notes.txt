@@ -8,7 +8,8 @@ e.g. In adminJs, we had a condition that when quiz status is active then only al
 --- Structure :
 
 Mediator class (Abstract) (MA): EventHandler
-Concrete Mediator (CM) : SignUpDialogBox
+Concrete Mediator (CM) : SignUpDialogBox : This is basically one stop destination that decides the operation that needs
+to be performed in case of an event.
 Colleague (Interface) (CI): UiControl
 Concrete Colleague (CC): Button, CheckBox and TextBox
 
