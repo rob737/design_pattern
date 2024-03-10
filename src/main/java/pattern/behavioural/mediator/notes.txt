@@ -11,7 +11,7 @@ Mediator class (Abstract) (MA): EventHandler
 Concrete Mediator (CM) : SignUpDialogBox : This is basically one stop destination that decides the operation that needs
 to be performed in case of an event.
 Colleague (Interface) (CI): UiControl
-Concrete Colleague (CC): Button, CheckBox and TextBox
+Concrete Colleague (CC): Button, CheckBox and TextBox : This would be the one raising an event.
 
 CC -> CI -> MA
 MA <- CM -> CC
@@ -25,7 +25,7 @@ to each other.
 e.g. we need to send communication from many places instead of calling communication
      service from all the places, we can define a mediator which will take care of communication.
 
-2. Any scenario which involves pre-requisite check.
+2. Any scenario which involves pre-requisite check. e.g. if user KYC is completed or not.
 
 3. I think thread's wait and notify mechanism can be achieved using mediator pattern
    wherein lock object will act as mediator.
