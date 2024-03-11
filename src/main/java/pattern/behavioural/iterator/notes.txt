@@ -6,13 +6,21 @@ one general rule of thumb is that if class A is dependent on class B then intern
 in class B must not change the contract of exposed method between class A and class B.
 
 Iterator can be very useful here to iterate over elements irrespective
-of the fact which datastructure was used internally to store the states in class B.
+of the fact which data structure was used internally to store the states in class B.
 
 
 It is very useful and popular.
 Real world use case :
 1. Designing history (go back mechanism) in web browser.
+2. Overall, the Iterator pattern is useful in any situation where you need to traverse
+   through a collection of elements in a sequential manner while
+   abstracting away the internal details of the collection.
+   It promotes a clean separation of concerns between the client code and the collection being iterated over.
 
+   e.g. Let's say you want to use RowSet to fetch query results of your DB query.
+   If the developers of the existing Driver class decides to change the contract then we can image
+   the level of disruption it would cause to entire codebase in java ecosystem.
+   Hence, maintaining separation of concern between the client code and the exposed collection must be maintained.
 
 ----- Iterator pattern components :
 

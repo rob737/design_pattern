@@ -12,12 +12,12 @@ public class Driver {
         for(String val : list)
             System.out.println(val);*/
         /*
-        * above implementation will have issues if history class changes the underlying datastructure
+        * above implementation will have issues if history class changes the underlying data structure
         * to store history.
         * We can use iterator pattern in scenarios like this.
         * */
 
-        iterator iterator = history.createIterator();
+        iterator<String> iterator = history.createIterator();
         while (iterator.hasNext()){
             System.out.println(iterator.current());
             iterator.next();

@@ -1,8 +1,8 @@
 package pattern.behavioural.iterator.assignment;
 
 public class Product {
-    private int id;
-    private String name;
+    private final int id;
+    private final String name;
 
     public Product(int id, String name) {
         this.id = id;
