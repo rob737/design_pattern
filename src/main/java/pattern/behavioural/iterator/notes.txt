@@ -24,7 +24,7 @@ Real world use case :
 
 ----- Iterator pattern components :
 
-History class : The entity that needs to be iterated.
+Iterable Component : The entity that needs to be iterated.
 iterator : interface that has next(), current() and hasNext() method.
 concrete implementations : concrete implementations for iterator interface.
 
