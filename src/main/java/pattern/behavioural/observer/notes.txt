@@ -17,3 +17,9 @@ Subject is publisher and Observer is subscriber.
 ---- Communication styles :
 1. Push : Subject pushes the changed data to Observers. (e.g. ActiveMQ)
 2. Pull : Observer pulls the data from Concrete Subject. (e.g. SQS) --- This is more flexible.
+
+
+---- Real world use case :
+
+1. Order status update once received from external delivery partner to be notified for sms update and
+   storing it in audit table.

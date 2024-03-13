@@ -1,7 +1,7 @@
 package pattern.behavioural.observer;
 
 public class Chart implements Observer {
-    private DataSource dataSource;
+    private final DataSource dataSource;
 
     public Chart(DataSource dataSource) {
         this.dataSource = dataSource;

@@ -1,7 +1,7 @@
 package pattern.behavioural.observer.assignment;
 
 public class Stock extends Observable{
-    private String symbol;
+    private final String symbol;
     private float price;
 
     public Stock(String symbol, float price) {
